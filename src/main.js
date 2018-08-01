@@ -6,6 +6,10 @@ import router from "./router";
 import "@/assets/style/reset.css";
 import "@/assets/style/border.css";
 import "@/assets/style/iconfont.css";
+import VueAwesomeSwiper from "vue-awesome-swiper";
+import "swiper/dist/css/swiper.css";
+
+Vue.use(VueAwesomeSwiper /* { default global options } */);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
