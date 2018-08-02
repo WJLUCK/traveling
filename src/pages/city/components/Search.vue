@@ -3,7 +3,6 @@
     <span>
       <input class="search-input" placeholder="输入城市名或拼音">
     </span>
-
   </div>
 </template>
 
@@ -34,5 +33,6 @@ export default {
   border-radius: 0.06rem;
   color: #666;
   padding: 0 0.1rem;
+  // margin:0 auto;
 }
 </style>
