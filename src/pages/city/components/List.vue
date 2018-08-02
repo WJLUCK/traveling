@@ -16,54 +16,22 @@
             <div class="button">北京</div>
           </div>
           <div class="button-wrapper">
-            <div class="button">北京</div>
+            <div class="button">上海</div>
           </div>
           <div class="button-wrapper">
-            <div class="button">北京</div>
+            <div class="button">杭州</div>
           </div>
           <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
+            <div class="button">香港</div>
           </div>
         </div>
       </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
+      <!-- 对象的遍历 用key值 -->
+      <div class="area" v-for="(item,key) of city" :key="key">
+        <div class="title border-topbottom">{{key}}</div>
         <div class="item-list">
-          <div class="item border-bottom">
-            阿拉尔
-          </div>
-          <div class="item border-bottom">
-            阿拉尔
-          </div>
-          <div class="item border-bottom">
-            阿拉尔
-          </div>
-          <div class="item border-bottom">
-            阿拉尔
-          </div>
-          <div class="item border-bottom">
-            阿拉尔
-          </div>
-        </div>
-        <div class="title border-topbottom">B</div>
-        <div class="item-list">
-          <div class="item border-bottom">
-            阿拉尔
-          </div>
-          <div class="item border-bottom">
-            阿拉尔
-          </div>
-          <div class="item border-bottom">
-            阿拉尔
-          </div>
-          <div class="item border-bottom">
-            阿拉尔
-          </div>
-          <div class="item border-bottom">
-            阿拉尔
+          <div class="item border-bottom" v-for="inner in item" :key="inner.id">
+            {{inner.name}}
           </div>
         </div>
       </div>
@@ -77,6 +45,9 @@ import BScroll from "better-scroll";
 export default {
   mounted() {
     this.scroll = new BScroll(this.$refs.wrapper);
+  },
+  props: {
+    city: Object
   }
 };
 </script>
