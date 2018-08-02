@@ -4,7 +4,7 @@
       热销推荐
     </div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item in list" :key="item.id">
         <!-- <div class="item-img-wrapper"> -->
         <img class="item-img" :src="item.imgUrl" alt="">
         <!-- </div> -->
@@ -21,38 +21,10 @@
 <script>
 export default {
   data() {
-    return {
-      recommendList: [
-        {
-          id: "01",
-          title: "北京",
-          desc: "【去哪儿专线】天安门+故宫+八达岭鸟巢+耳麦 赠珍宝馆+扇子",
-          imgUrl:
-            "https://imgs.qunarzz.com/p/tts2/1804/97/382b3bd308aea002.jpg_160x160_a24dc648.jpg"
-        },
-        {
-          id: "02",
-          title: "北京",
-          desc: "【去哪儿专线】天安门+故宫+八达岭鸟巢+耳麦 赠珍宝馆+扇子",
-          imgUrl:
-            "https://imgs.qunarzz.com/p/tts2/1804/97/382b3bd308aea002.jpg_160x160_a24dc648.jpg"
-        },
-        {
-          id: "03",
-          title: "北京",
-          desc: "【去哪儿专线】天安门+故宫+八达岭鸟巢+耳麦 赠珍宝馆+扇子",
-          imgUrl:
-            "https://imgs.qunarzz.com/p/tts2/1804/97/382b3bd308aea002.jpg_160x160_a24dc648.jpg"
-        },
-        {
-          id: "04",
-          title: "北京",
-          desc: "【去哪儿专线】天安门+故宫+八达岭鸟巢+耳麦 赠珍宝馆+扇子",
-          imgUrl:
-            "https://imgs.qunarzz.com/p/tts2/1804/97/382b3bd308aea002.jpg_160x160_a24dc648.jpg"
-        }
-      ]
-    };
+    return {};
+  },
+  props: {
+    list: Array
   }
 };
 </script>

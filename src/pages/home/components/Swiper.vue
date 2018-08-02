@@ -1,7 +1,7 @@
 <template>
   <div class="swiper">
-    <swiper :options="swiperOption">
-      <swiper-slide v-for="item in swiperList" :key="item.id">
+    <swiper :options="swiperOption" v-if="showSwiper">
+      <swiper-slide v-for="item in list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl">
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -19,25 +19,16 @@ export default {
           el: ".swiper-pagination"
         },
         loop: true
-      },
-      swiperList: [
-        {
-          id: "01",
-          imgUrl:
-            "https://source.qunarzz.com/site/images/wap/home/recommend/iphoneplus/sc_sqdc_20180727.jpg"
-        },
-        {
-          id: "02",
-          imgUrl:
-            "https://source.qunarzz.com/site/images/wap/home/recommend/iphoneplus/anquan_20180716.png"
-        },
-        {
-          id: "03",
-          imgUrl:
-            "https://source.qunarzz.com/site/images/wap/home/recommend/iphoneplus/dujia_shuqi_banner_20180710.jpg"
-        }
-      ]
+      }
     };
+  },
+  props: {
+    list: Array
+  },
+  computed: {
+    showSwiper() {
+      return this.list.length;
+    }
   }
 };
 </script>
