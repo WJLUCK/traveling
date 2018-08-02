@@ -8,6 +8,7 @@ import "@/assets/style/border.css";
 import "@/assets/style/iconfont.css";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/dist/css/swiper.css";
+// import BScroll from 'better-scroll'
 
 Vue.use(VueAwesomeSwiper /* { default global options } */);
 Vue.config.productionTip = false;
