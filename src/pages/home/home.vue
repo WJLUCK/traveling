@@ -58,7 +58,9 @@ export default {
       // console.log(res.data);
     }
   },
+  //用keep-alive之后会多出一个activated生命周期函数
   activated() {
+    // 当页面重新显示的时候
     if (this.lastCity !== this.city) {
       this.lastCity = this.city;
       this.getHomeInfo();
