@@ -40,8 +40,10 @@ export default {
     },
     handleTouchStart() {
       this.touchStatus = true;
+      // e.preventDefault();
     },
     handleTouchMove(e) {
+      // e.preventDefault();
       if (this.touchStatus) {
         if (this.timer) {
           clearTimeout(this.timer);

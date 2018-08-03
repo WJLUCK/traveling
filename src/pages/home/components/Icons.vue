@@ -19,7 +19,9 @@ export default {
   data() {
     return {
       swiperOption: {
-        autoplay: false
+        autoplay: {
+          stopOnLastSlide: true
+        }
       }
     };
   },

@@ -12,7 +12,8 @@
 
 <script>
 export default {
-  name: "CityHeader"
+  name: "CityHeader",
+  computed: {}
 };
 </script>
 
