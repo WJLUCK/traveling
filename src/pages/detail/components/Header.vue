@@ -23,7 +23,12 @@ export default {
     };
   },
   activated() {
+    //对全局事件的绑定 会对其他组件也有影响
     window.addEventListener("scroll", this.handleShow);
+  },
+  deactivated() {
+    //页面即将被隐藏 进行解除绑定
+    window.removeEventListener("scroll", this.handleShow);
   },
   methods: {
     handleShow() {
